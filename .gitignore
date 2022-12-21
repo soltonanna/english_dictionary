@@ -1,0 +1,10 @@
+TODO.txt
+.qmake.stash
+PLAN.json
+Makefile
+Dictionary
+moc/
+obj/
+data/checked_types
+data/theme
+new_theme

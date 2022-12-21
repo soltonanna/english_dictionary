@@ -1,0 +1,31 @@
+#!/bin/bash
+
+help_mess=$"
+help:
+        use_data words.db
+        "
+check_input()
+{
+        if [ $# -ne 1 ]; then
+                echo -e "$help_mess"
+                exit 1
+        fi
+        if [ -f $1 ]; then
+                copy_to_data $1
+        else
+                echo file \"$1\" no found!
+                exit 1
+        fi
+}
+
+copy_to_data()
+{
+        cp $1 data/words.db
+}
+
+main()
+{
+        check_input $@
+}
+
+main $@
